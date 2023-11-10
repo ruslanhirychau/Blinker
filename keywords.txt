@@ -1,0 +1,8 @@
+#######################################
+# Syntax Coloring Map For Blinker
+#######################################
+
+Blinker	KEYWORD1
+init	KEYWORD2
+blink	KEYWORD2
+handle	KEYWORD2
