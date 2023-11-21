@@ -1,16 +1,12 @@
 #include "Blinker.h"
 
-Blinker::Blinker(int pin = LED_BUILTIN)
+Blinker::Blinker(int pin)
 {
     _pin = pin;
     _pulses = 0;
     _isOn = false;
     _previousMillis = 0;
     _blinkCount = 0;
-}
-
-void Blinker::init()
-{
     pinMode(_pin, OUTPUT);
 }
 

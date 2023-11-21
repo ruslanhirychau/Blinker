@@ -6,7 +6,7 @@
 class Blinker
 {
 public:
-    Blinker(int pin);
+    Blinker(int pin = LED_BUILTIN);
     void init();
     void blink(int pulses = 1, int period = 50);
     void handle();

@@ -19,10 +19,9 @@ Here's a simple example of how to use the Blinker library:
 ```cpp
 #include <Blinker.h>
 
-Blinker blinker(LED_BUILTIN);
+Blinker blinker;
 
 void setup() {
-  blinker.init();
   blinker.blink(); // Default to 1 blink of 50ms
 }
 
