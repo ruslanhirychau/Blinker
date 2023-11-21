@@ -6,13 +6,13 @@
 class Blinker
 {
 public:
-    Blinker(int ledPin);
+    Blinker(int pin);
     void init();
     void blink(int pulses = 1, int period = 50);
     void handle();
 
 private:
-    int _ledPin;
+    int _pin;
     int _pulses;
     int _period;
     bool _isOn;

@@ -1,8 +1,8 @@
 #include "Blinker.h"
 
-Blinker::Blinker(int ledPin)
+Blinker::Blinker(int pin = LED_BUILTIN)
 {
-    _ledPin = ledPin;
+    _pin = pin;
     _pulses = 0;
     _isOn = false;
     _previousMillis = 0;
@@ -11,7 +11,7 @@ Blinker::Blinker(int ledPin)
 
 void Blinker::init()
 {
-    pinMode(_ledPin, OUTPUT);
+    pinMode(_pin, OUTPUT);
 }
 
 void Blinker::blink(int pulses, int period)
@@ -34,13 +34,13 @@ void Blinker::handle()
 
             if (_isOn)
             {
-                digitalWrite(_ledPin, LOW);
+                digitalWrite(_pin, LOW);
                 _isOn = false;
                 _blinkCount++; // Increment here after a full ON/OFF cycle
             }
             else
             {
-                digitalWrite(_ledPin, HIGH);
+                digitalWrite(_pin, HIGH);
                 _isOn = true;
             }
         }
